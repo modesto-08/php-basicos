@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "Senai@118";
 $dbname = "exercicio";
@@ -9,10 +9,10 @@ try {
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Verifica se houve algum erro na conexão
-    if ($conn->connect_error) {
-        throw new Exception("Falha na conexão: " . $conn->connect_error);
+    if ($sconn -> connect_error) {
+        throw new Exception("Falha n conexão: " . $conn->connect_error);
     }
-
+    
     echo "Conexão realizada com sucesso!";
 } catch (Exception $e) {
     // Exibe uma mensagem de erro amigável
@@ -28,3 +28,4 @@ try {
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL
 ); -->
+
